@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_screen_title_horizontal_margin"
+        android:layout_marginEnd="@dimen/main_screen_title_horizontal_margin"
+        android:layout_marginBottom="@dimen/main_screen_title_bottom_margin"
+        android:fontFamily="@font/tabacg3_bold"
+        android:text="@string/main_screen_title"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/main_screen_title_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--  Ellipse  -->
+
+    <ImageView
+        android:id="@+id/ellipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ellipse_margin_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_top_anchor"
+        app:srcCompat="@drawable/background_item_ellipse" />
+
+    <Space
+        android:id="@+id/ellipse_top_anchor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ellipse_top_anchor"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--  Rectangle  -->
+
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_bottom_anchor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/background_item_rectangle" />
+
+    <Space
+        android:id="@+id/rectangle_bottom_anchor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/rectangle_bottom_anchor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+    <!--  Triangle  -->
+
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/triangle_margin_end"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/triangle_top_anchor"
+        app:srcCompat="@drawable/background_item_triangle" />
+
+    <Space
+        android:id="@+id/triangle_top_anchor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/triangle_top_anchor"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--  Grid  -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gridGuidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gridGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <ImageView
+        android:id="@+id/bug1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="67"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.76"
+        app:srcCompat="@drawable/ic_bug" />
+
+    <ImageView
+        android:id="@+id/bug2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-46"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.67"
+        app:srcCompat="@drawable/ic_bug" />
+
+    <ImageView
+        android:id="@+id/bug3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="150"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.35"
+        app:srcCompat="@drawable/ic_bug" />
+
+    <ImageView
+        android:id="@+id/bug4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="16"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.62"
+        app:srcCompat="@drawable/ic_bug" />
+
+    <ImageView
+        android:id="@+id/bug5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-114"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/ic_bug" />
+
+    <ImageView
+        android:id="@+id/grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bug_grid_3x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="270:172"
+        app:layout_constraintEnd_toEndOf="@+id/gridGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/gridGuidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

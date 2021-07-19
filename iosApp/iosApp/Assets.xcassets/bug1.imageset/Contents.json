@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "bug1.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
